@@ -1,5 +1,5 @@
-import HamburgerButton from "./ui/HamburgerButton";
-import Logo from "./ui/Logo";
+import HamburgerButton from "./ui/navbar/HamburgerButton";
+import Logo from "./ui/navbar/Logo";
 
 export default function Navbar() {
   return (
