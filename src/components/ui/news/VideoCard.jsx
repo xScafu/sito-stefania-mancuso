@@ -21,6 +21,7 @@ export default function VideoCard() {
   let videoCard = videoArray.map((video) => (
     <>
       <iframe
+        type="text/html"
         src={video.url}
         width="100%"
         height="200px"
