@@ -1,7 +1,7 @@
 import FacebookIcon from "../icons/FacebookIcon";
 import InstagramIcon from "../icons/InstagramIcon";
 import SpotifyIcon from "../icons/SpotifyIcon";
-import TiktokIcon from "../icons/tiktokIcon";
+import TiktokIcon from "../icons/TiktokIcon";
 import YoutubeIcon from "../icons/YouTubeIcon";
 
 export default function Socials() {
