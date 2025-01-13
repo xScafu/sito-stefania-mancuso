@@ -6,7 +6,7 @@ import MainButton from "./ui/buttons/MainButton";
 export default function Body() {
   return (
     <>
-      <div className="flex items-end justify-end mt-10">
+      <div className="flex items-end justify-end mt-10 relative z-0">
         <Title />
         <BackgroundImage />
       </div>
