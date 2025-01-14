@@ -1,7 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { toggleMenu } from "../../../features/menu/menuSlice";
 import { gsap } from "gsap";
-import Menu from "./Menu";
 
 export default function HamburgerButton() {
   const menuState = useSelector((state) => state.menu.isOpen);
@@ -61,7 +60,7 @@ export default function HamburgerButton() {
           </svg>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width={40}
+            width={25}
             height={1}
             className="underLine"
           >
