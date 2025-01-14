@@ -31,7 +31,7 @@ export default function Menu() {
     <>
       <div className={`absolute ml-[-1.5rem] mt-[-2.5rem] sm:ml-[-3rem] `}>
         <section
-          className={`absolute z-10 flex flex-col gap-10 mt-40 ml-20 text-4xl ${hideMenu} menu`}
+          className={`absolute z-10 flex flex-col gap-10 mt-40 ml-20 text-4xl menu`}
         >
           <a href="">
             <button className="menu">Home</button>

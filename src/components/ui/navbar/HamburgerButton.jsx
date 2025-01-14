@@ -43,7 +43,6 @@ export default function HamburgerButton() {
 
   return (
     <>
-      <Menu />
       <button onClick={() => dispatch(toggleMenu())}>
         <div className="relative">
           <svg
