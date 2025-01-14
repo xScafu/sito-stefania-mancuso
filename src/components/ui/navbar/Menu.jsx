@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import { gsap } from "gsap";
 import { useState } from "react";
+import DarkModeButton from "./DarkModeButton";
 
 export default function Menu() {
   const menuState = useSelector((state) => state.menu.isOpen);
@@ -29,6 +30,7 @@ export default function Menu() {
 
   return (
     <>
+      {/* <DarkModeButton /> */}
       <div className={`absolute mt-[-2.5rem]`}>
         <section
           className={`absolute z-10 left-[-14rem] flex flex-col gap-10 mt-40 ml-20 text-4xl text-bistre font-bold ${hideMenu} menu`}

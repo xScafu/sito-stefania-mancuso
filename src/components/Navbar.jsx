@@ -1,3 +1,4 @@
+import DarkModeButton from "./ui/navbar/DarkModeButton";
 import HamburgerButton from "./ui/navbar/HamburgerButton";
 import Logo from "./ui/navbar/Logo";
 import Menu from "./ui/navbar/Menu";
