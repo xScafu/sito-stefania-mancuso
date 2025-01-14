@@ -1,12 +1,14 @@
 import { useSelector, useDispatch } from "react-redux";
 import { toggleMenu } from "../../../features/menu/menuSlice";
 import { gsap } from "gsap";
+import Menu from "./Menu";
 
 export default function HamburgerButton() {
   const menuState = useSelector((state) => state.menu.isOpen);
   const dispatch = useDispatch();
 
   if (menuState === true) {
+    //Open animation
     gsap.to(".upperLine", {
       duration: 0.5,
       rotation: 45,
@@ -20,12 +22,8 @@ export default function HamburgerButton() {
       ease: "power2.inOut",
       attr: { width: 40 },
     });
-    gsap.to(".circle", {
-      duration: 1,
-      delay: 0.5,
-      attr: { r: 1000 },
-    });
   } else {
+    //Close animation
     gsap.to(".upperLine", {
       duration: 0.5,
       delay: 0.8,
@@ -41,22 +39,11 @@ export default function HamburgerButton() {
       ease: "power2.inOut",
       attr: { width: 25 },
     });
-    gsap.to(".circle", {
-      duration: 0.8,
-      attr: { r: 0 },
-    });
   }
 
   return (
     <>
-      <div>
-        <svg className="absolute ml-[-1.5rem] mt-[-2.5rem] w-screen h-screen">
-          <clipPath>
-            <rect width="100vw" height="100vh" x="-30" y="-50" opacity="0" />
-          </clipPath>
-          <circle r={0} cx={46} cy={56} className="fill-melon circle" />
-        </svg>
-      </div>
+      <Menu />
       <button onClick={() => dispatch(toggleMenu())}>
         <div className="relative">
           <svg
