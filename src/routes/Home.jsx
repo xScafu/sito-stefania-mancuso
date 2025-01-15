@@ -4,10 +4,10 @@ import Navbar from "../components/Navbar";
 
 export default function Home() {
   return (
-    <>
+    <div className="border-2 border-bistre">
       <Navbar />
       <Body />
       <Footer />
-    </>
+    </div>
   );
 }

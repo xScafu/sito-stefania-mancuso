@@ -1,45 +1,47 @@
 import { useSelector, useDispatch } from "react-redux";
 import { toggleMenu } from "../../../features/menu/menuSlice";
 import { gsap } from "gsap";
+import { useEffect } from "react";
 
 export default function HamburgerButton() {
   const menuState = useSelector((state) => state.menu.isOpen);
   const dispatch = useDispatch();
 
-  if (menuState === true) {
-    //Open animation
-    gsap.to(".upperLine", {
-      duration: 0.5,
-      rotation: 45,
-      y: 8,
-      ease: "power2.inOut",
-    });
-    gsap.to(".underLine", {
-      duration: 0.5,
-      rotation: -45,
-      y: -3,
-      ease: "power2.inOut",
-      attr: { width: 40 },
-    });
-  } else {
-    //Close animation
-    gsap.to(".upperLine", {
-      duration: 0.5,
-      delay: 0.8,
-      rotation: 0,
-      y: 0,
-      ease: "power2.inOut",
-    });
-    gsap.to(".underLine", {
-      duration: 0.5,
-      delay: 0.8,
-      rotation: 0,
-      y: 0,
-      ease: "power2.inOut",
-      attr: { width: 25 },
-    });
-  }
-
+  useEffect(() => {
+    if (menuState) {
+      //Open animation
+      gsap.to(".upperLine", {
+        duration: 0.5,
+        rotation: 45,
+        y: 8,
+        ease: "power2.inOut",
+      });
+      gsap.to(".underLine", {
+        duration: 0.5,
+        rotation: -45,
+        y: -3,
+        ease: "power2.inOut",
+        attr: { width: 40 },
+      });
+    } else {
+      //Close animation
+      gsap.to(".upperLine", {
+        duration: 0.5,
+        delay: 0.8,
+        rotation: 0,
+        y: 0,
+        ease: "power2.inOut",
+      });
+      gsap.to(".underLine", {
+        duration: 0.5,
+        delay: 0.8,
+        rotation: 0,
+        y: 0,
+        ease: "power2.inOut",
+        attr: { width: 25 },
+      });
+    }
+  }, [menuState]);
   return (
     <>
       <button onClick={() => dispatch(toggleMenu())}>
@@ -69,7 +71,7 @@ export default function HamburgerButton() {
               x2={40}
               y1={0}
               y2={0}
-              className="stroke-bistre stroke-1 relative top-10 "
+              className="line stroke-bistre stroke-1 relative top-10 "
             />
           </svg>
         </div>

@@ -8,7 +8,7 @@ import { Provider } from "react-redux";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Provider store={store}>
-      <div className="border-2 m-2 border-bistre ">
+      <div className=" ">
         <App />
       </div>
     </Provider>
