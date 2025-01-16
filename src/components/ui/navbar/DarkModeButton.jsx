@@ -31,7 +31,7 @@ export default function DarkModeButton() {
           }}
         >
           <div className="swiper">
-            <svg width="24px">
+            <svg width="24px" height="24px">
               <circle
                 r={12}
                 className="fill-melon dark:fill-bistre translate-x-3 translate-y-3"

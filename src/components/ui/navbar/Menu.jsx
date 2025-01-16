@@ -36,9 +36,9 @@ export default function Menu() {
 
   return (
     <>
-      <div className={`absolute mt-[-2.5rem]`}>
+      <div className={`absolute top-[-50px] z-50`}>
         <section
-          className={`absolute z-10 left-[-14rem] flex flex-col gap-10 mt-40 ml-20 text-4xl text-bistre dark:text-englishViolet font-bold ${hideMenu} menu`}
+          className={`absolute z-30 left-[-14rem] flex flex-col gap-10 mt-40 ml-20 text-4xl text-bistre dark:text-englishViolet font-bold ${hideMenu} menu`}
         >
           <div className="switcher absolute right-[-180px] sm:right-[-210px] top-[-80px]">
             <DarkModeButton />
@@ -56,15 +56,14 @@ export default function Menu() {
             <button className="menu">Contact</button>
           </a>
         </section>
-
-        <svg className={`w-screen h-[105vh] ${hideMenu}`}>
-          <circle
-            r={0}
-            cx={45}
-            cy={90}
-            className="fill-melon dark:fill-darkPurple circle sm:translate-x-[1.5rem]"
-          />
-        </svg>
+        <div className={`w-full h-[105vh] ${hideMenu} relative z-10`}>
+          <svg width="100vw" height="auto">
+            <circle
+              r={0}
+              className="absolute fill-melon dark:fill-darkPurple circle"
+            />
+          </svg>
+        </div>
       </div>
     </>
   );

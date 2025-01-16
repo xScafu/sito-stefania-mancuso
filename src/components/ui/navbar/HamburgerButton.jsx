@@ -44,8 +44,11 @@ export default function HamburgerButton() {
   }, [menuState]);
   return (
     <>
-      <button onClick={() => dispatch(toggleMenu())}>
-        <div className="relative">
+      <button
+        className="relative top-[1.5rem] z-50"
+        onClick={() => dispatch(toggleMenu())}
+      >
+        <div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width={40}

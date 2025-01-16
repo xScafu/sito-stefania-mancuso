@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 
 export default function Home() {
   return (
-    <div className="border-2 border-bistre">
+    <div className="border-2 border-bistre overflow-hidden">
       <Navbar />
       <Body />
       <Footer />

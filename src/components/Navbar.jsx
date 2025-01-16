@@ -4,13 +4,16 @@ import Menu from "./ui/navbar/Menu";
 
 export default function Navbar() {
   return (
-    <div className="flex justify-center sticky top-0 z-10 bg-apricot dark:bg-englishViolet">
+    <div className="sticky">
       <Menu />
-      <div className="absolute mt-[1.8rem] mr-[18rem]">
-        <HamburgerButton />
-      </div>
-      <div className="my-5">
-        <Logo />
+      <div className="flex justify-center bg-apricot dark:bg-englishViolet">
+        <div>
+          <HamburgerButton />
+        </div>
+        <div className="my-5">
+          <Logo />
+        </div>
+        <div className="w-[40px]"></div>
       </div>
     </div>
   );
