@@ -4,7 +4,7 @@ import Menu from "./ui/navbar/Menu";
 
 export default function Navbar() {
   return (
-    <div className="sticky">
+    <div className="relative">
       <Menu />
       <div className="flex justify-center bg-apricot dark:bg-englishViolet">
         <div>

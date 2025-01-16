@@ -25,9 +25,9 @@ export default function Menu() {
       gsap.to(".circle", {
         duration: 0.8,
         attr: { r: 0 },
-        onComplete: () => {
-          setHideMenu("hidden"); // Nascondi il menu
-        },
+        // onComplete: () => {
+        //   setHideMenu("hidden"); // Nascondi il menu
+        // },
       });
       gsap.to(".menu", { duration: 0.3, x: 0 });
       gsap.to(".switcher", { duration: 0.5, x: -500 });
@@ -57,10 +57,16 @@ export default function Menu() {
           </a>
         </section>
         <div className={`w-full h-[105vh] ${hideMenu} relative z-10`}>
-          <svg width="100vw" height="auto">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="100vw"
+            height="auto"
+            cx={0}
+            cy={0}
+          >
             <circle
               r={0}
-              className="absolute fill-melon dark:fill-darkPurple circle"
+              className="absolute translate-y-12 z-40 fill-melon dark:fill-darkPurple circle"
             />
           </svg>
         </div>
