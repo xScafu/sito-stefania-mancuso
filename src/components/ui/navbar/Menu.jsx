@@ -57,7 +57,7 @@ export default function Menu() {
           </a>
         </section>
 
-        <svg className={`w-screen h-[105vh] ${hideMenu} `}>
+        <svg className={`w-screen h-[105vh] ${hideMenu}`}>
           <circle
             r={0}
             cx={45}

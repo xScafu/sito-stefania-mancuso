@@ -15,7 +15,7 @@ function App() {
     <div
       className={`${
         darkMode ? "dark" : ""
-      } overflow-hidden p-2 bg-apricot dark:bg-englishViolet`}
+      } p-2 bg-apricot dark:bg-englishViolet`}
     >
       <Home />
     </div>

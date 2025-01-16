@@ -57,7 +57,7 @@ export default function HamburgerButton() {
               x2={40}
               y1={0}
               y2={0}
-              className="stroke-bistre dark:stroke-englishViolet stroke-1"
+              className="stroke-bistre stroke-1 dark:stroke-2"
             />
           </svg>
           <svg
@@ -71,7 +71,7 @@ export default function HamburgerButton() {
               x2={40}
               y1={0}
               y2={0}
-              className="line stroke-bistre dark:stroke-englishViolet stroke-1 relative top-10 "
+              className="line stroke-bistre stroke-1 dark:stroke-2 relative top-10 "
             />
           </svg>
         </div>
