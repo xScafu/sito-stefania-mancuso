@@ -2,7 +2,7 @@ export default function Logo() {
   return (
     <div className="w-[15rem]">
       <svg
-        className="fill-bistre"
+        className="fill-bistre dark:fill-englishViolet"
         xmlns="http://www.w3.org/2000/svg"
         xmlSpace="preserve"
         id="Livello_1"
