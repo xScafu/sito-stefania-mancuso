@@ -25,7 +25,7 @@ export default function DarkModeButton() {
     <>
       <div className="absolute">
         <div
-          className="bg-bistre dark:bg-englishViolet text-base cursor-pointer p-1 rounded-full w-14 h-8"
+          className="bg-bistre dark:bg-wine text-base cursor-pointer p-1 rounded-full w-14 h-8"
           onClick={() => {
             dispatch(toggleDarkMode());
           }}
@@ -34,7 +34,7 @@ export default function DarkModeButton() {
             <svg width="24px" height="24px">
               <circle
                 r={12}
-                className="fill-melon dark:fill-bistre translate-x-3 translate-y-3"
+                className="fill-melon dark:fill-darkPurple translate-x-3 translate-y-3"
               />
             </svg>
           </div>

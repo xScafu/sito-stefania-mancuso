@@ -1,8 +1,8 @@
 export default function Logo() {
   return (
-    <div className="w-[15rem]">
+    <div className="w-[18rem]">
       <svg
-        className="fill-bistre"
+        className="fill-bistre dark:fill-wine"
         xmlns="http://www.w3.org/2000/svg"
         xmlSpace="preserve"
         id="Livello_1"

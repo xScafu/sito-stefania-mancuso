@@ -25,9 +25,9 @@ export default function Menu() {
       gsap.to(".circle", {
         duration: 0.8,
         attr: { r: 0 },
-        // onComplete: () => {
-        //   setHideMenu("hidden"); // Nascondi il menu
-        // },
+        onComplete: () => {
+          setHideMenu("hidden"); // Nascondi il menu
+        },
       });
       gsap.to(".menu", { duration: 0.3, x: 0 });
       gsap.to(".switcher", { duration: 0.5, x: -500 });
@@ -36,9 +36,9 @@ export default function Menu() {
 
   return (
     <>
-      <div className={`absolute top-[-50px] z-50`}>
+      <div className={`absolute top-[-38px] z-50 `}>
         <section
-          className={`absolute z-30 left-[-14rem] flex flex-col gap-10 mt-40 ml-20 text-4xl text-bistre dark:text-englishViolet font-bold ${hideMenu} menu`}
+          className={`absolute z-30 left-[-14rem] flex flex-col gap-10 mt-40 ml-20 text-4xl text-bistre dark:text-wine  font-bold ${hideMenu} menu`}
         >
           <div className="switcher absolute right-[-180px] sm:right-[-210px] top-[-80px]">
             <DarkModeButton />
@@ -56,7 +56,7 @@ export default function Menu() {
             <button className="menu">Contact</button>
           </a>
         </section>
-        <div className={`w-full h-[105vh] ${hideMenu} relative z-10`}>
+        <div className={`w-full h-[105vh] ${hideMenu} relative z-10 `}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="100vw"
@@ -66,7 +66,7 @@ export default function Menu() {
           >
             <circle
               r={0}
-              className="absolute translate-y-12 z-40 fill-melon dark:fill-darkPurple circle"
+              className="absolute translate-y-10 z-40 fill-melon dark:fill-darkPurple circle"
             />
           </svg>
         </div>

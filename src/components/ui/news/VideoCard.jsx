@@ -27,10 +27,10 @@ export default function VideoCard() {
         height="200px"
         className="mt-20"
       ></iframe>
-      <h1 className="text-apricot dark:text-englishViolet text-xl mt-5 font-semibold dark:font-bold">
+      <h1 className="text-apricot dark:text-wine text-xl mt-5 font-semibold dark:font-bold">
         {video.name}
       </h1>
-      <hr className="mt-20 border-apricot dark:border-englishViolet" />
+      <hr className="mt-20 border-apricot dark:border-wine" />
     </>
   ));
 

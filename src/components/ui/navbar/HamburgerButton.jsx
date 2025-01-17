@@ -45,7 +45,7 @@ export default function HamburgerButton() {
   return (
     <>
       <button
-        className="relative top-[1.5rem] z-50"
+        className="relative top-[2rem] z-50"
         onClick={() => dispatch(toggleMenu())}
       >
         <div>
@@ -60,7 +60,7 @@ export default function HamburgerButton() {
               x2={40}
               y1={0}
               y2={0}
-              className="stroke-bistre stroke-1 dark:stroke-2"
+              className="stroke-bistre dark:stroke-wine stroke-1 dark:stroke-2"
             />
           </svg>
           <svg
@@ -74,7 +74,7 @@ export default function HamburgerButton() {
               x2={40}
               y1={0}
               y2={0}
-              className="line stroke-bistre stroke-1 dark:stroke-2 relative top-10 "
+              className="line stroke-bistre dark:stroke-wine stroke-1 dark:stroke-2 relative top-10 "
             />
           </svg>
         </div>
