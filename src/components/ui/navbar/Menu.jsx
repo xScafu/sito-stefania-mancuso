@@ -36,7 +36,7 @@ export default function Menu() {
 
   return (
     <>
-      <div className={`absolute top-[-38px] z-50 `}>
+      <div className={`absolute top-[-38px] z-40 `}>
         <section
           className={`absolute z-30 left-[-14rem] flex flex-col gap-10 mt-40 ml-20 text-4xl text-bistre dark:text-wine  font-bold ${hideMenu} menu`}
         >

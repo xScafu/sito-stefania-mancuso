@@ -10,6 +10,7 @@ export default {
       xl: "1440px",
     },
     colors: {
+      rose50: "#fff1f2",
       apricot: "#FED0BB",
       melon: "#FCB9B2",
       bistre: "#251605",
