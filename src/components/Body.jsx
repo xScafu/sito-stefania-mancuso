@@ -52,7 +52,7 @@ export default function Body() {
 
   return (
     <div ref={bodyContainer}>
-      <div className="carousel p-5">
+      <div className="carousel">
         <Carousel />
       </div>
       <div className="flex items-end justify-end mt-10 relative z-0">
