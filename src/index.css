@@ -9,3 +9,15 @@
     font-family: "Playfair Display", system-ui, sans-serif;
   }
 }
+
+.swiper {
+  transform: none !important;
+}
+
+.swiper-button-prev {
+  color: #fff1f2 !important;
+}
+
+.swiper-button-next {
+  color: #fff1f2 !important;
+}
