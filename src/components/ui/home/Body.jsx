@@ -1,12 +1,12 @@
-import BackgroundImage from "./ui/body/BackgroundImage";
-import News from "./ui/body/News";
-import Title from "./ui/body/Title";
-import MainButton from "./ui/buttons/MainButton";
+import BackgroundImage from "../body/BackgroundImage";
+import News from "../body/News";
+import Title from "../body/Title";
+import MainButton from "../buttons/MainButton";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 import { gsap } from "gsap/gsap-core";
 import { useSelector } from "react-redux";
-import Carousel from "./ui/body/Carousel";
+import Carousel from "../body/Carousel";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function Body() {
