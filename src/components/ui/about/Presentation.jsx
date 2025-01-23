@@ -28,7 +28,7 @@ export default function Presentation() {
     <div ref={presentationContainer}>
       <img
         className="h-[28rem] object-[70%_100%] object-cover border-y-2 border-bistre"
-        src="./public/img/photo-2.jpg"
+        src="./img/photo-2.jpg"
         alt=""
       />
       <div className="mt-5 bg-bistre dark:bg-darkPurple px-12 py-6 max-w-72 -translate-x-96 about">
