@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import Home from "./routes/Home";
 import About from "./routes/About";
+import Music from "./routes/Music";
+import Contact from "./routes/Contact";
 import Navbar from "./components/Navbar";
 import { useSelector } from "react-redux";
 import { PrimeReactProvider, PrimeReactContext } from "primereact/api";
@@ -45,6 +47,22 @@ function App() {
                 element={
                   <PageAnimation>
                     <About />
+                  </PageAnimation>
+                }
+              />
+              <Route
+                path="music"
+                element={
+                  <PageAnimation>
+                    <Music />
+                  </PageAnimation>
+                }
+              />
+              <Route
+                path="contact"
+                element={
+                  <PageAnimation>
+                    <Contact />
                   </PageAnimation>
                 }
               />

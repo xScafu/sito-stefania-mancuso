@@ -64,9 +64,19 @@ export default function Menu() {
             </NavLink>
           </button>
 
-          <button className="menu">Music</button>
+          <button className="menu" onClick={() => dispatch(toggleMenu())}>
+            <NavLink to="music" viewTransition>
+              {" "}
+              Music
+            </NavLink>
+          </button>
 
-          <button className="menu">Contact</button>
+          <button className="menu" onClick={() => dispatch(toggleMenu())}>
+            <NavLink to="contact" viewTransition>
+              {" "}
+              Contact
+            </NavLink>
+          </button>
         </section>
         <div className={`w-full h-[105vh] ${hideMenu} relative z-10 `}>
           <svg
