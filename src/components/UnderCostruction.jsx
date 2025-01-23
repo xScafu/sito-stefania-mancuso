@@ -3,7 +3,7 @@ export default function UnderConstruction() {
     <div>
       <h1 className="text-center text-5xl mt-52 mb-96 font-bold dark:text-wine">
         {" "}
-        Sorry, the page is unnder construction 🚧{" "}
+        Sorry, the page is under construction 🚧{" "}
       </h1>
     </div>
   );

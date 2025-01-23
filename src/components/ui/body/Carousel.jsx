@@ -15,7 +15,7 @@ export default function Carousel() {
       <Swiper
         spaceBetween={30}
         effect={"fade"}
-        navigation={true}
+        navigation={false}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,

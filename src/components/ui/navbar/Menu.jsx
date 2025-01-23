@@ -64,12 +64,12 @@ export default function Menu() {
             </NavLink>
           </button>
 
-          <button className="menu" onClick={() => dispatch(toggleMenu())}>
+          {/* <button className="menu" onClick={() => dispatch(toggleMenu())}>
             <NavLink to="music" viewTransition>
               {" "}
               Music
             </NavLink>
-          </button>
+          </button> */}
 
           <button className="menu" onClick={() => dispatch(toggleMenu())}>
             <NavLink to="contact" viewTransition>
