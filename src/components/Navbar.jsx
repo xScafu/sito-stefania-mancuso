@@ -6,6 +6,8 @@ import { gsap } from "gsap/gsap-core";
 import { useGSAP } from "@gsap/react";
 import { toggleNavbarAnimation } from "../features/animations/animationsSlice";
 import { useDispatch } from "react-redux";
+import NavMenu from "./ui/navbar/NavMenu";
+import DarkModeButton from "./ui/navbar/DarkModeButton";
 
 export default function Navbar() {
   gsap.registerPlugin(useGSAP());
@@ -36,14 +38,20 @@ export default function Navbar() {
   return (
     <div className="relative" ref={navbarContainer}>
       <Menu />
-      <div className="flex justify-center bg-apricot dark:bg-englishViolet">
-        <div className="hamButton z-50">
+      <div className="flex justify-center md:justify-between md:items-center bg-apricot dark:bg-englishViolet">
+        <div className="hamButton z-50 md:hidden">
           <HamburgerButton />
         </div>
-        <div className="my-5 logo">
+        <div className="my-5 logo ">
           <Logo />
         </div>
-        <div className="w-[40px]"></div>
+        <div className="mx-5 xs:hidden md:inline">
+          <NavMenu />
+        </div>
+        <div className="xs:hidden md:inline mx-5">
+          <DarkModeButton />
+        </div>
+        <div className="w-[40px] md:hidden"></div>
       </div>
     </div>
   );

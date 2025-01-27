@@ -9,28 +9,27 @@ export default function DarkModeButton() {
 
   useEffect(() => {
     darkState
-      ? gsap.to(".swiper", {
-          translateX: 24,
+      ? gsap.to(".swipe", {
+          x: 24,
           duration: 0.5,
           ease: "elastic.out(0.4,0.3)",
         })
-      : gsap.to(".swiper", {
-          translateX: 0,
+      : gsap.to(".swipe", {
+          x: 0,
           duration: 0.5,
           ease: "elastic.out(0.4,0.3)",
         });
   });
-
   return (
     <>
-      <div className="absolute">
+      <div className="absolute md:relative">
         <div
           className="bg-bistre dark:bg-wine text-base cursor-pointer p-1 rounded-full w-14 h-8"
           onClick={() => {
             dispatch(toggleDarkMode());
           }}
         >
-          <div className="swiper">
+          <div className="swipe">
             <svg width="24px" height="24px">
               <circle
                 r={12}

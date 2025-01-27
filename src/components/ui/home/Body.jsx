@@ -55,23 +55,25 @@ export default function Body() {
       <div className="carousel">
         <Carousel />
       </div>
-      <div className="flex items-end justify-end mt-10 relative z-0">
-        <div className="absolute translate-x-[-500px] z-40 left-5 py-2 px-4 bg-apricot dark:bg-englishViolet title">
-          <Title />
+      <div className="md:w-[35rem] mx-auto">
+        <div className="flex items-end justify-end mt-10 relative z-0 ">
+          <div className="absolute translate-x-[-500px] z-40 left-5 py-2 px-4 bg-apricot dark:bg-englishViolet title">
+            <Title />
+          </div>
+          <div className="relative backImage translate-x-[500px]">
+            <BackgroundImage />
+          </div>
         </div>
-        <div className="relative backImage translate-x-[500px]">
-          <BackgroundImage />
+        <div className="text-start mt-5 ml-6 button opacity-0">
+          <a
+            href="https://songwhip.com/stefaniamancuso/ma-che-ne-sai-di-me"
+            target="_blank"
+          >
+            <MainButton>
+              <p className="text-xl font-bold">Ascolta ora</p>
+            </MainButton>
+          </a>
         </div>
-      </div>
-      <div className="text-start mt-5 ml-6 button opacity-0">
-        <a
-          href="https://songwhip.com/stefaniamancuso/ma-che-ne-sai-di-me"
-          target="_blank"
-        >
-          <MainButton>
-            <p className="text-xl font-bold">Ascolta ora</p>
-          </MainButton>
-        </a>
       </div>
       <News />
     </div>

@@ -24,25 +24,28 @@ export default function Carousel() {
         className="mySwiper border-t-2 border-b-2 border-bistre"
       >
         <SwiperSlide>
-          <div className="h-[30rem]">
+          <div className="h-[30rem] md:h-[50rem]">
             <img
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-[100%_40%]"
               src="../img/photo-1.jpg"
             />
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="h-[30rem]">
-            <img className="h-full object-cover" src="../img/photo-2.jpg" />
+          <div className="h-[30rem] md:h-[50rem]">
+            <img
+              className="h-full object-cover object-[70%_100%]"
+              src="../img/photo-2.jpg"
+            />
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="h-[30rem]">
+          <div className="h-[30rem] md:h-[50rem]">
             <img className="h-full object-cover" src="../img/photo-3.jpg" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="h-[30rem]">
+          <div className="h-[30rem] md:h-[50rem]">
             <img
               className="h-full w-full object-cover"
               src="../img/photo-4.jpg"
@@ -50,7 +53,7 @@ export default function Carousel() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="h-[30rem]">
+          <div className="h-[30rem] md:h-[50rem]">
             <img
               className="h-full w-full object-cover"
               src="../img/photo-5.jpg"
@@ -58,7 +61,7 @@ export default function Carousel() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="h-[30rem]">
+          <div className="h-[30rem] md:h-[50rem]">
             <img
               className="h-full w-full object-cover"
               src="../img/photo-6.jpg"
@@ -66,7 +69,7 @@ export default function Carousel() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="h-[30rem]">
+          <div className="h-[30rem] md:h-[50rem]">
             <img
               className="h-full w-full object-cover"
               src="../img/photo-7.jpg"
@@ -74,7 +77,7 @@ export default function Carousel() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="h-[30rem]">
+          <div className="h-[30rem] md:h-[50rem]">
             <img
               className="h-full w-full object-cover"
               src="../img/photo-8.jpg"
@@ -82,7 +85,7 @@ export default function Carousel() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="h-[30rem]">
+          <div className="h-[30rem] md:h-[50rem]">
             <img
               className="h-full w-full object-cover"
               src="../img/photo-9.jpg"
