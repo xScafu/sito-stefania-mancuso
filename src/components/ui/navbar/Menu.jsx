@@ -51,14 +51,30 @@ export default function Menu() {
           </div>
 
           <button className="menu" onClick={() => dispatch(toggleMenu())}>
-            <NavLink to="/" viewTransition>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive
+                  ? "decoration-bistre dark:decoration-wine underline"
+                  : ""
+              }
+              viewTransition
+            >
               {" "}
               Home
             </NavLink>
           </button>
 
           <button className="menu" onClick={() => dispatch(toggleMenu())}>
-            <NavLink to="about" viewTransition>
+            <NavLink
+              to="about"
+              className={({ isActive }) =>
+                isActive
+                  ? "decoration-bistre dark:decoration-wine underline"
+                  : ""
+              }
+              viewTransition
+            >
               {" "}
               About
             </NavLink>
@@ -72,7 +88,15 @@ export default function Menu() {
           </button> */}
 
           <button className="menu" onClick={() => dispatch(toggleMenu())}>
-            <NavLink to="contact" viewTransition>
+            <NavLink
+              to="contact"
+              className={({ isActive }) =>
+                isActive
+                  ? "decoration-bistre dark:decoration-wine underline"
+                  : ""
+              }
+              viewTransition
+            >
               {" "}
               Contact
             </NavLink>

@@ -27,7 +27,7 @@ export default function Presentation() {
   return (
     <div ref={presentationContainer}>
       <img
-        className="h-[28rem] object-[70%_100%] object-cover border-y-2 border-bistre"
+        className="h-[28rem] md:h-[40rem] w-full object-[70%_100%] object-cover border-y-2 border-bistre"
         src="./img/photo-2.jpg"
         alt=""
       />
