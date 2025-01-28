@@ -38,11 +38,11 @@ export default function Navbar() {
   return (
     <div className="relative" ref={navbarContainer}>
       <Menu />
-      <div className="flex justify-center md:justify-between md:items-center bg-apricot dark:bg-englishViolet">
+      <div className="p-5 flex justify-center md:justify-between md:items-center bg-apricot dark:bg-englishViolet">
         <div className="hamButton z-50 md:hidden">
           <HamburgerButton />
         </div>
-        <div className="my-5 logo ">
+        <div className="logo w-[18rem] xl:hidden">
           <Logo />
         </div>
         <div className="mx-5 xs:hidden md:inline">

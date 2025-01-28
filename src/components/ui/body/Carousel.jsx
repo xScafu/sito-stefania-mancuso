@@ -34,7 +34,7 @@ export default function Carousel() {
         <SwiperSlide>
           <div className="h-[30rem] md:h-[50rem]">
             <img
-              className="h-full w-full object-cover object-[70%_100%]"
+              className="h-full w-full object-cover object-[70%_100%] xl:object-[30%_20%]"
               src="../img/photo-2.jpg"
             />
           </div>
@@ -42,7 +42,7 @@ export default function Carousel() {
         <SwiperSlide>
           <div className="h-[30rem] md:h-[50rem]">
             <img
-              className="h-full w-full object-cover object-[100%_20%]"
+              className="h-full w-full object-cover object-[100%_20%] xl:object-[30%_10%]"
               src="../img/photo-3.jpg"
             />
           </div>
@@ -50,7 +50,7 @@ export default function Carousel() {
         <SwiperSlide>
           <div className="h-[30rem] md:h-[50rem]">
             <img
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover xl:object-[30%_5%]"
               src="../img/photo-4.jpg"
             />
           </div>
@@ -74,7 +74,7 @@ export default function Carousel() {
         <SwiperSlide>
           <div className="h-[30rem] md:h-[50rem]">
             <img
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover xl:object-[30%_10%]"
               src="../img/photo-7.jpg"
             />
           </div>

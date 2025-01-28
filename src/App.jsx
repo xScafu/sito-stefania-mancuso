@@ -8,6 +8,7 @@ import { useSelector } from "react-redux";
 import { PrimeReactProvider, PrimeReactContext } from "primereact/api";
 import { Route, Routes, useLocation } from "react-router";
 import { motion, AnimatePresence } from "motion/react";
+import LogoBig from "./components/ui/home/LoogoBig";
 
 function App() {
   const darkModeSelector = useSelector((state) => state.theme.darkMode);
@@ -28,6 +29,9 @@ function App() {
       } p-2 bg-apricot dark:bg-englishViolet`}
     >
       <div className="border-2 border-bistre overflow-clip">
+        <div className="hidden xl:inline">
+          <LogoBig />
+        </div>
         <div className="sticky top-0 z-50 navbar">
           <Navbar />
         </div>
