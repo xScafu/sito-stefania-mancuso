@@ -11,14 +11,14 @@ export default function LogoBig() {
     () => {
       let tl = gsap.timeline();
 
-      tl.to(".draw-me", { duration: 2, opacity: 1, delay: 1 });
+      tl.to(".logo", { duration: 2, opacity: 1, delay: 1 });
     },
     { scope: logoContainer }
   );
 
   return (
     <div ref={logoContainer}>
-      <div className="w-[50rem] mx-auto my-[22rem] draw-me opacity-0">
+      <div className="w-[50rem] logo opacity-0">
         <Logo />
       </div>
     </div>

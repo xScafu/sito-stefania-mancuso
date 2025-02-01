@@ -21,7 +21,7 @@ export default function Carousel() {
           disableOnInteraction: false,
         }}
         modules={[EffectFade, Navigation, Autoplay]}
-        className="mySwiper border-t-2 border-b-2 border-bistre"
+        className="mySwiper border-t-2 border-b-2 border-bistre bg-black"
       >
         <SwiperSlide>
           <div className="h-[30rem] md:h-[50rem]">

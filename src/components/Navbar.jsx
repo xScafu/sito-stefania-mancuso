@@ -8,9 +8,11 @@ import { toggleNavbarAnimation } from "../features/animations/animationsSlice";
 import { useDispatch } from "react-redux";
 import NavMenu from "./ui/navbar/NavMenu";
 import DarkModeButton from "./ui/navbar/DarkModeButton";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 export default function Navbar() {
   gsap.registerPlugin(useGSAP());
+  gsap.registerPlugin(ScrollTrigger);
 
   const navbarContainer = useRef();
   const dispatch = useDispatch();

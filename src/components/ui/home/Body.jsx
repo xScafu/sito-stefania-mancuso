@@ -8,6 +8,7 @@ import { gsap } from "gsap/gsap-core";
 import { useSelector } from "react-redux";
 import Carousel from "../body/Carousel";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import LogoBig from "../body/LoogoBig";
 
 export default function Body() {
   gsap.registerPlugin(useGSAP());
@@ -52,7 +53,10 @@ export default function Body() {
 
   return (
     <div ref={bodyContainer}>
-      <div className="carousel">
+      <div className="hidden xl:inline absolute top-0 left-1/3 my-96 z-40">
+        <LogoBig />
+      </div>
+      <div className="carousel opacity-40">
         <Carousel />
       </div>
       <div className="md:w-[35rem] mx-auto">
