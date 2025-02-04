@@ -1,11 +1,11 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import HamburgerButton from "./ui/navbar/HamburgerButton";
 import Logo from "./ui/navbar/Logo";
 import Menu from "./ui/navbar/Menu";
 import { gsap } from "gsap/gsap-core";
 import { useGSAP } from "@gsap/react";
 import { toggleNavbarAnimation } from "../features/animations/animationsSlice";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import NavMenu from "./ui/navbar/NavMenu";
 import DarkModeButton from "./ui/navbar/DarkModeButton";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -14,8 +14,20 @@ export default function Navbar() {
   gsap.registerPlugin(useGSAP());
   gsap.registerPlugin(ScrollTrigger);
 
+  const scrollAnimationStarted = useSelector(
+    (state) => state.animations.scrollAnimationStarted
+  );
   const navbarContainer = useRef();
   const dispatch = useDispatch();
+
+  useGSAP(
+    () => {
+      if (scrollAnimationStarted) {
+        gsap.to(".logoSmall", { translateY: 0, duration: 1 });
+      }
+    },
+    { scope: navbarContainer, dependencies: [scrollAnimationStarted] }
+  );
 
   useGSAP(
     () => {
@@ -49,6 +61,9 @@ export default function Navbar() {
         </div>
         <div className="mx-5 xs:hidden md:inline">
           <NavMenu />
+        </div>
+        <div className={`logoSmall w-[18rem] -translate-y-40`}>
+          <Logo />
         </div>
         <div className="xs:hidden md:inline mx-5">
           <DarkModeButton />

@@ -27,16 +27,16 @@ export default function Presentation() {
   return (
     <div ref={presentationContainer}>
       <img
-        className="h-[28rem] md:h-[40rem] w-full object-[70%_100%] object-cover border-y-2 border-bistre"
+        className="h-[28rem] md:h-[40rem] w-full object-[70%_100%] xl:object-[70%_30%] object-cover border-y-2 border-bistre"
         src="./img/photo-2.jpg"
         alt=""
       />
-      <div className="mt-5 bg-bistre dark:bg-darkPurple px-12 py-6 max-w-72 -translate-x-96 about">
-        <h1 className="text-center text-4xl text-apricot dark:text-wine">
+      <div className="mt-5 bg-bistre dark:bg-darkPurple px-12 py-6 max-w-72 xl:max-w-96 -translate-x-96 about">
+        <h1 className="text-center text-4xl xl:text-5xl text-apricot dark:text-wine">
           About me
         </h1>
       </div>
-      <p className="mt-16 font-serif text-xl p-5 text-bistre dark:text-wine text opacity-0">
+      <p className="mt-16 font-serif text-xl p-5 text-bistre dark:text-wine text opacity-0 xl:mx-auto xl:w-[60rem]">
         <div className="mb-10">
           <b>Stefania Mancuso</b>, classe 96 è una cantautrice Rivolese della
           provincia di Torino.

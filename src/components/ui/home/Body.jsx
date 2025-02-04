@@ -5,19 +5,23 @@ import MainButton from "../buttons/MainButton";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 import { gsap } from "gsap/gsap-core";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import Carousel from "../body/Carousel";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import LogoBig from "../body/LoogoBig";
+import { scrollAnimationStarted } from "../../../features/animations/animationsSlice";
 
 export default function Body() {
   gsap.registerPlugin(useGSAP());
   gsap.registerPlugin(ScrollTrigger);
 
   const bodyContainer = useRef();
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const navbarAnimationEnded = useSelector(
     (state) => state.animations.navbarAnimationEnded
+  );
+  const animationStarted = useSelector(
+    (state) => state.animations.scrollAnimationStarted
   );
 
   useGSAP(
@@ -27,7 +31,6 @@ export default function Body() {
         tl.to(".backImage", {
           translateX: 0,
           duration: 1,
-          onComplete: () => {},
         });
         gsap.to(
           ".title",
@@ -36,6 +39,7 @@ export default function Body() {
             translateX: 0,
             duration: 1,
             ease: "power2.inOut",
+            onStart: () => dispatch(scrollAnimationStarted()),
           },
           "<"
         );
@@ -51,9 +55,13 @@ export default function Body() {
     { scope: bodyContainer, dependencies: [navbarAnimationEnded] }
   );
 
+  let hideLogoToggle = animationStarted ? "hidden" : "inline";
+
   return (
     <div ref={bodyContainer}>
-      <div className="hidden xl:inline absolute top-0 left-1/3 my-96 z-40">
+      <div
+        className={`hidden xl:${hideLogoToggle} absolute top-0 left-1/3 my-96 z-40`}
+      >
         <LogoBig />
       </div>
       <div className="carousel opacity-40">
