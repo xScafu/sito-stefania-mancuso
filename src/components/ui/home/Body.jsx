@@ -39,7 +39,7 @@ export default function Body() {
             translateX: 0,
             duration: 1,
             ease: "power2.inOut",
-            onStart: () => dispatch(scrollAnimationStarted()),
+            onUpdate: () => dispatch(scrollAnimationStarted()),
           },
           "<"
         );
@@ -55,12 +55,12 @@ export default function Body() {
     { scope: bodyContainer, dependencies: [navbarAnimationEnded] }
   );
 
-  let hideLogoToggle = animationStarted ? "hidden" : "inline";
+  let hideLogoToggle = animationStarted == true ? "hidden" : "inline";
 
   return (
     <div ref={bodyContainer}>
       <div
-        className={`hidden xl:${hideLogoToggle} absolute top-0 left-1/3 my-96 z-40`}
+        className={`max-lg:hidden xl:${hideLogoToggle} absolute top-0 left-1/3 my-96 z-40`}
       >
         <LogoBig />
       </div>

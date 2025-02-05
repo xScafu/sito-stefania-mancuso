@@ -15,7 +15,7 @@ const animationsSlice = createSlice({
       state.menuAnimationEnded = !state.menuAnimationEnded;
     },
     scrollAnimationStarted: (state) => {
-      state.scrollAnimationStarted = !state.scrollAnimationStarted;
+      state.scrollAnimationStarted = true;
     },
   },
 });

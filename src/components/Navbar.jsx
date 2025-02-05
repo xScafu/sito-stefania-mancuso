@@ -52,20 +52,20 @@ export default function Navbar() {
   return (
     <div className="relative" ref={navbarContainer}>
       <Menu />
-      <div className="p-5 flex justify-center md:justify-between md:items-center bg-apricot dark:bg-englishViolet">
+      <div className="p-5 flex justify-center md:justify-between md:items-center xl:grid grid-cols-3 justify-items-center bg-apricot dark:bg-englishViolet">
         <div className="hamButton z-50 md:hidden">
           <HamburgerButton />
         </div>
         <div className="logo w-[18rem] xl:hidden">
           <Logo />
         </div>
-        <div className="mx-5 xs:hidden md:inline">
+        <div className="mx-5 xs:hidden md:inline justify-self-start">
           <NavMenu />
         </div>
-        <div className={`logoSmall w-[18rem] -translate-y-40`}>
+        <div className={`max-xl:hidden logoSmall w-[18rem] -translate-y-40`}>
           <Logo />
         </div>
-        <div className="xs:hidden md:inline mx-5">
+        <div className="xs:hidden md:inline mx-5 justify-self-end">
           <DarkModeButton />
         </div>
         <div className="w-[40px] md:hidden"></div>
