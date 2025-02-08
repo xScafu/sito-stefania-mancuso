@@ -18,7 +18,7 @@ export default function LogoBig() {
 
   return (
     <div ref={logoContainer}>
-      <div className="w-[50rem] logo opacity-0">
+      <div className="w-[60rem] logo opacity-0">
         <Logo />
       </div>
     </div>

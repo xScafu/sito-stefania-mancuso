@@ -60,7 +60,7 @@ export default function Body() {
   return (
     <div ref={bodyContainer}>
       <div
-        className={`max-lg:hidden xl:${hideLogoToggle} absolute top-0 left-1/3 my-96 z-40`}
+        className={`max-lg:hidden xl:${hideLogoToggle} absolute left-1/2 -translate-x-1/2 top-0 mx-auto my-96 z-40`}
       >
         <LogoBig />
       </div>

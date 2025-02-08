@@ -16,8 +16,8 @@ export default function Form() {
     // Usa EmailJS per inviare i dati
     emailjs
       .sendForm(
-        "service_yhzbaw1",
-        "template_ftq7rbe",
+        "service_hx7991l",
+        "template_tdaenrx",
         formRef.current, // Ref del form
         "vri7e3_B5RDCmyr3_"
       )
