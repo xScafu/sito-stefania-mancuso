@@ -2,13 +2,27 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const animationsSlice = createSlice({
   name: "animationsSlice",
-  initialState: { navbarAnimationEnded: false },
+  initialState: {
+    navbarAnimationEnded: false,
+    menuAnimationEnded: true,
+    scrollAnimationStarted: false,
+  },
   reducers: {
     toggleNavbarAnimation: (state) => {
       state.navbarAnimationEnded = !state.navbarAnimationEnded;
     },
+    toggleMenuAnimationEnded: (state) => {
+      state.menuAnimationEnded = !state.menuAnimationEnded;
+    },
+    scrollAnimationStarted: (state) => {
+      state.scrollAnimationStarted = true;
+    },
   },
 });
 
-export const { toggleNavbarAnimation } = animationsSlice.actions;
+export const {
+  toggleNavbarAnimation,
+  toggleMenuAnimationEnded,
+  scrollAnimationStarted,
+} = animationsSlice.actions;
 export default animationsSlice.reducer;

@@ -11,8 +11,8 @@ export default {
     },
     colors: {
       rose50: "#fff1f2",
-      apricot: "#FED0BB",
-      melon: "#FCB9B2",
+      apricot: "#e3c4d5",
+      melon: "#eab8ce",
       bistre: "#251605",
       wine: "#A64D79",
       englishViolet: "#3B1C32",

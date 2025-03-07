@@ -1,10 +1,10 @@
 import Footer from "../components/Footer";
-import Presentation from "../components/ui/about/Presentation";
+import UnderConstruction from "../components/UnderCostruction";
 
 export default function About() {
   return (
     <>
-      <Presentation />
+      <UnderConstruction />
       <Footer />
     </>
   );

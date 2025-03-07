@@ -25,9 +25,9 @@ export default function VideoCard() {
         src={video.url}
         width="100%"
         height="200px"
-        className="mt-20"
+        className="mt-20 md:h-96 xl:h-[40rem] xl:w-[65rem] xl:mx-auto"
       ></iframe>
-      <h1 className="text-apricot dark:text-wine text-xl mt-5 font-semibold dark:font-bold">
+      <h1 className="text-apricot dark:text-wine text-xl mt-5 font-semibold dark:font-bold xl:text-center xl:text-3xl">
         {video.name}
       </h1>
       <hr className="mt-20 border-apricot dark:border-wine" />

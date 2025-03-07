@@ -1,10 +1,14 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleMenu } from "../../../features/menu/menuSlice";
 import { gsap } from "gsap";
 import { useState, useEffect } from "react";
 import DarkModeButton from "./DarkModeButton";
+import { NavLink } from "react-router";
+import { toggleMenuAnimationEnded } from "../../../features/animations/animationsSlice";
 
 export default function Menu() {
   const menuState = useSelector((state) => state.menu.isOpen);
+  const dispatch = useDispatch();
   const [hideMenu, setHideMenu] = useState("hidden");
 
   useEffect(() => {
@@ -16,6 +20,7 @@ export default function Menu() {
         attr: { r: 1000 },
         onStart: () => {
           setHideMenu(""); // Mostra il menu
+          dispatch(toggleMenuAnimationEnded());
         },
       });
       gsap.to(".switcher", { duration: 0.5, x: 0, delay: 1 });
@@ -27,6 +32,7 @@ export default function Menu() {
         attr: { r: 0 },
         onComplete: () => {
           setHideMenu("hidden"); // Nascondi il menu
+          dispatch(toggleMenuAnimationEnded());
         },
       });
       gsap.to(".menu", { duration: 0.3, x: 0 });
@@ -43,18 +49,58 @@ export default function Menu() {
           <div className="switcher absolute right-[-180px] sm:right-[-210px] top-[-80px]">
             <DarkModeButton />
           </div>
-          <a href="">
-            <button className="menu">Home</button>
-          </a>
-          <a href="">
-            <button className="menu">About</button>
-          </a>
-          <a href="">
-            <button className="menu">Music</button>
-          </a>
-          <a href="">
-            <button className="menu">Contact</button>
-          </a>
+
+          <button className="menu" onClick={() => dispatch(toggleMenu())}>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive
+                  ? "decoration-bistre dark:decoration-wine underline"
+                  : ""
+              }
+              viewTransition
+            >
+              {" "}
+              Home
+            </NavLink>
+          </button>
+
+          <button className="menu" onClick={() => dispatch(toggleMenu())}>
+            <NavLink
+              to="about"
+              className={({ isActive }) =>
+                isActive
+                  ? "decoration-bistre dark:decoration-wine underline"
+                  : ""
+              }
+              viewTransition
+            >
+              {" "}
+              About
+            </NavLink>
+          </button>
+
+          {/* <button className="menu" onClick={() => dispatch(toggleMenu())}>
+            <NavLink to="music" viewTransition>
+              {" "}
+              Music
+            </NavLink>
+          </button> */}
+
+          <button className="menu" onClick={() => dispatch(toggleMenu())}>
+            <NavLink
+              to="contact"
+              className={({ isActive }) =>
+                isActive
+                  ? "decoration-bistre dark:decoration-wine underline"
+                  : ""
+              }
+              viewTransition
+            >
+              {" "}
+              Contact
+            </NavLink>
+          </button>
         </section>
         <div className={`w-full h-[105vh] ${hideMenu} relative z-10 `}>
           <svg
