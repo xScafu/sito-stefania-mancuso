@@ -45,7 +45,7 @@ export default function HamburgerButton() {
   return (
     <>
       <button
-        className="relative top-[2rem] z-50"
+        className="relative top-[0.5rem] z-50"
         onClick={() => dispatch(toggleMenu())}
       >
         <div>

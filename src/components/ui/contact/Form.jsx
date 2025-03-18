@@ -32,7 +32,7 @@ export default function Form() {
   };
 
   const inputEffects =
-    "input py-2 pr-10 pl-2 mt-5 xl:w-1/4 xl:text-lg dark:bg-darkPurple autofill:bg-darkPurple";
+    "input py-2 pr-10 pl-2 md:w-3/4 md:text-lg dark:bg-darkPurple autofill:bg-darkPurple";
 
   return (
     <div className="flex flex-col items-center font-serif">
@@ -43,14 +43,14 @@ export default function Form() {
         })}
         action=""
         method="post"
-        className="flex flex-col text-bistre w-3/4 items-center"
+        className="flex flex-col text-bistre w-4/4 lg:w-3/4 items-center"
       >
         <input
           {...register("firstName", { required: true })}
           aria-invalid={errors.firstName ? "true" : "false"}
           type="text"
           placeholder="Your name here*"
-          className={inputEffects}
+          className={`${inputEffects}`}
         />
         {errors.firstName?.type === "required" && (
           <p role="alert" className="text-bistre dark:text-wine xl:text-2xl">
@@ -62,7 +62,7 @@ export default function Form() {
           aria-invalid={errors.lastName ? "true" : "false"}
           type="text"
           placeholder="Your surname here*"
-          className={inputEffects}
+          className={`${inputEffects} mt-5`}
         />
         {errors.lastName?.type === "required" && (
           <p role="alert" className="text-bistre dark:text-wine xl:text-2xl">
@@ -74,7 +74,7 @@ export default function Form() {
           aria-invalid={errors.email ? "true" : "false"}
           type="text"
           placeholder="Your e-mail here*"
-          className={inputEffects}
+          className={`${inputEffects} mt-5`}
         />
         {errors.email?.type === "required" && (
           <p role="alert" className="text-bistre dark:text-wine xl:text-2xl">

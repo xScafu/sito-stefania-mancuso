@@ -5,11 +5,13 @@ import Text from "../components/ui/contact/Text";
 export default function About() {
   return (
     <>
-      <div className="my-36">
-        <Text />
-      </div>
-      <div className="my-36">
-        <Form />
+      <div className="flex flex-col lg:flex-row mx-5 lg:mx-0 gap-0 lg:gap-20 justify-center">
+        <div className="my-28">
+          <Text />
+        </div>
+        <div className="my-28">
+          <Form />
+        </div>
       </div>
       <Footer />
     </>

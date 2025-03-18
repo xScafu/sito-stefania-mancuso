@@ -64,7 +64,7 @@ export default function Body() {
       >
         <LogoBig />
       </div>
-      <div className="carousel opacity-40">
+      <div className="carousel opacity-40 max-md:opacity-100">
         <Carousel />
       </div>
       <div className="md:w-[35rem] mx-auto">
