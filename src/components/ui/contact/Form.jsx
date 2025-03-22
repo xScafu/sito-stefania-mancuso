@@ -5,6 +5,8 @@ import MainButton from "../buttons/MainButton";
 
 export default function Form() {
   const formRef = useRef(null);
+  let success = "";
+  let failure = "";
 
   const {
     register,
@@ -12,7 +14,7 @@ export default function Form() {
     formState: { errors },
   } = useForm();
 
-  const sendEmail = (formData) => {
+  const sendEmail = () => {
     // Usa EmailJS per inviare i dati
     emailjs
       .sendForm(
@@ -23,10 +25,10 @@ export default function Form() {
       )
       .then(
         () => {
-          alert("Email inviata con successo! Grazie per avermi contattato!");
+          success = "Email inviata con successo! Grazie per avermi contattato!";
         },
         () => {
-          alert("Errore nell'invio dell'email. Riprova.");
+          failure = "Errore nell'invio dell'email. Riprova.";
         }
       );
   };
@@ -92,6 +94,9 @@ export default function Form() {
             A message is required
           </p>
         )}
+        <p>
+          {success} {failure}
+        </p>
         <div className="mt-5">
           <MainButton>
             <input type="submit" value="Submit" className="px-5 py-2" />
