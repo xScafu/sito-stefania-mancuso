@@ -61,15 +61,15 @@ export default function Presentation() {
           <b>Bungaro</b> e si è esibita nelle piazze più importanti del salotto
           torinese in varie manifestazioni. <br /> <i>Vince</i> una borsa di
           studio di un anno per frequentare la <b>“Coro Orchestra Vianney”</b>{" "}
-          di Torino affrontando repertori polifonici esibendosi come solista con
+          di Torino affrontando repertori polifonici esibendosi come solista con{" "}
           <i>successo e apprezzamento del pubblico</i>.
         </div>
         <div className="mb-10">
           Nasce il suo <i>primo gruppo musicale</i> i <i>“Last Minute”</i> cover
           band pop/rock degli anni 90/00 e seguirono altri gruppi che portarono
-          a diverse
-          <i>esperienze di live</i> a contatto con il pubblico come gli{" "}
-          <i>“A14”</i> di Guardialfiera e i <i>“BPM Project Trio”</i>. <br />
+          a diverse <i>esperienze di live</i> a contatto con il pubblico come
+          gli <i>“A14”</i> di Guardialfiera e i <i>“BPM Project Trio”</i>.{" "}
+          <br />
           Nel 2017 entra a far parte della Compilation{" "}
           <b>“Album di Artisti Vari”</b> grazie al concorso canoro{" "}
           <b>“Canto Italiano”</b> portando l’inedito <i>“Ho Paura”</i> e la
@@ -88,7 +88,7 @@ export default function Presentation() {
           <i>
             l’Ospedale Regina Margherita
             <i></i> e <i>Casa Ugi</i> portando un sorriso ai bimbi meno
-          </i>
+          </i>{" "}
           fortunati, facendo vari musical nelle vesti di <i>Mary Poppins</i>{" "}
           cantando le canzoni più famose della <i>Disney</i>. Apre la{" "}
           <b>“Partita del Cuore”</b> presso lo <b>Juventus Stadium</b> nel 2019.
@@ -103,12 +103,11 @@ export default function Presentation() {
           <i>scritto da lei</i> dal titolo <b>“MA CHE NE SAI DI ME”</b>{" "}
           <i>disponibile su tutte le piattaforme digitali.</i> <br />É stata in
           gara nel contest canoro <b>“Canta che ti Passa 2023/2024”</b> al
-          programma
-          <i>“Uno Mattina in Famiglia”</i> su <i>Rai Uno</i> per diversi mesi.
-          Nel 2024 ha partecipato al programma televisivo <b>“VideoBox”</b> di{" "}
-          <i>Fiorello</i> su <i>Rai Due</i> e successivamente è stata{" "}
-          <i>ospite</i> su <i>Rai Radio Due</i>
-          al programma <b>“Sogni di Gloria"</b> <i>per una sua intervista</i>.
+          programma <i>“Uno Mattina in Famiglia”</i> su <i>Rai Uno</i> per
+          diversi mesi. Nel 2024 ha partecipato al programma televisivo{" "}
+          <b>“VideoBox”</b> di <i>Fiorello</i> su <i>Rai Due</i> e
+          successivamente è stata <i>ospite</i> su <i>Rai Radio Due</i> al
+          programma <b>“Sogni di Gloria"</b> <i>per una sua intervista</i>.
         </div>
       </p>
     </div>
