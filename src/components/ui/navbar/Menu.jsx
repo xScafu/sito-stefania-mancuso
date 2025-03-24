@@ -107,10 +107,11 @@ export default function Menu() {
             xmlns="http://www.w3.org/2000/svg"
             width="100vw"
             height="auto"
-            cx={0}
-            cy={0}
+            style={{ overflow: "visible" }}
           >
             <circle
+              cx="0"
+              cy="0"
               r={0}
               className="absolute translate-y-10 z-40 fill-melon dark:fill-darkPurple circle"
             />
