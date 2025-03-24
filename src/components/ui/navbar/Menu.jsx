@@ -52,6 +52,7 @@ export default function Menu() {
 
           <button className="menu" onClick={() => dispatch(toggleMenu())}>
             <NavLink
+              onClick={window.scrollTo(0, 0)}
               to="/"
               className={({ isActive }) =>
                 isActive

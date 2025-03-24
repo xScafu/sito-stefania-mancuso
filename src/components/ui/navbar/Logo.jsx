@@ -3,7 +3,7 @@ import { NavLink } from "react-router";
 export default function Logo() {
   return (
     <div>
-      <NavLink to="/" viewTransition>
+      <NavLink to="/" onClick={() => window.scrollTo(0, 0)} viewTransition>
         <svg
           className="fill-bistre dark:fill-wine"
           xmlns="http://www.w3.org/2000/svg"
