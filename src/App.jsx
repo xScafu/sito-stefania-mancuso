@@ -8,6 +8,7 @@ import { useSelector } from "react-redux";
 import { PrimeReactProvider, PrimeReactContext } from "primereact/api";
 import { Route, Routes, useLocation } from "react-router";
 import { motion, AnimatePresence } from "motion/react";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   const darkModeSelector = useSelector((state) => state.theme.darkMode);
@@ -33,6 +34,7 @@ function App() {
         </div>
         <AnimatePresence mode="wait">
           <PrimeReactProvider value={value}>
+            <ScrollToTop />
             <Routes location={location} key={location.pathname}>
               <Route
                 path="/"

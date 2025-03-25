@@ -46,7 +46,7 @@ export default function Menu() {
         <section
           className={`absolute z-30 left-[-14rem] flex flex-col gap-10 mt-40 ml-20 text-4xl text-bistre dark:text-wine  font-bold ${hideMenu} menu`}
         >
-          <div className="switcher absolute right-[-180px] sm:right-[-210px] top-[-80px]">
+          <div className="switcher absolute right-[-190px] sm:right-[-220px] top-[-80px]">
             <DarkModeButton />
           </div>
 

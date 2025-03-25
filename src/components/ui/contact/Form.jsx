@@ -2,19 +2,20 @@ import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
 import MainButton from "../buttons/MainButton";
+import { useState } from "react";
 
 export default function Form() {
   const formRef = useRef(null);
-  let success = "";
-  let failure = "";
+  const [message, setMessage] = useState(""); // Stato per i messaggi di successo/errore
 
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
 
-  const sendEmail = () => {
+  const sendEmail = (data) => {
     // Usa EmailJS per inviare i dati
     emailjs
       .sendForm(
@@ -25,10 +26,13 @@ export default function Form() {
       )
       .then(
         () => {
-          success = "Email inviata con successo! Grazie per avermi contattato!";
+          setMessage(
+            "Email inviata con successo! Grazie per avermi contattato!"
+          );
+          reset();
         },
-        () => {
-          failure = "Errore nell'invio dell'email. Riprova.";
+        (error) => {
+          setMessage("Errore nell'invio dell'email. Riprova.");
         }
       );
   };
@@ -74,7 +78,7 @@ export default function Form() {
         <input
           {...register("email", { required: true })}
           aria-invalid={errors.email ? "true" : "false"}
-          type="text"
+          type="email"
           placeholder="Your e-mail here*"
           className={`${inputEffects} mt-5`}
         />
@@ -94,12 +98,20 @@ export default function Form() {
             A message is required
           </p>
         )}
-        <p>
-          {success} {failure}
-        </p>
+
+        {message && (
+          <p className="mt-3 text-center text-bistre dark:text-wine xl:text-2xl">
+            {message}
+          </p>
+        )}
+
         <div className="mt-5">
           <MainButton>
-            <input type="submit" value="Submit" className="px-5 py-2" />
+            <input
+              type="submit"
+              value="Submit"
+              className="px-5 py-2 cursor-pointer"
+            />
           </MainButton>
         </div>
       </form>
