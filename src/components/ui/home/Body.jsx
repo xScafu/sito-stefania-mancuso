@@ -78,7 +78,7 @@ export default function Body() {
         </div>
         <div className="text-start mt-5 ml-6 button opacity-0">
           <a
-            href="https://songwhip.com/stefaniamancuso/ma-che-ne-sai-di-me"
+            href="https://open.spotify.com/intl-it/track/3krNcyV7QENdUbEUtCirzE?si=bbd54805a7e74ef9"
             target="_blank"
           >
             <MainButton>
